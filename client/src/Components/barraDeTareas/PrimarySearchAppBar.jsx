@@ -167,14 +167,7 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block", color:'#00FF00' } }}
-          >
-            EstiloSmart
-          </Typography>
+         
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
