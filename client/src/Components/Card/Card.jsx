@@ -37,10 +37,10 @@ export default function RecipeReviewCard() {
 
   console.log(product);
   return (
-    <Card sx={{ maxWidth: "100%", backgroundColor: "#777777" }}>
+    <Card sx={{ maxWidth: "100%", bgcolorolor: "#ffff" }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[100] }} aria-label="recipe">
+          <Avatar sx={{ bgcolor: '#87e5db' }} aria-label="recipe">
             R
           </Avatar>
         }
@@ -60,7 +60,7 @@ export default function RecipeReviewCard() {
         alt={product.name}
       />
       <CardContent>
-        <Typography variant="body2" color="#ffff">
+        <Typography variant="body2">
           {product.price}
         </Typography>
       </CardContent>
