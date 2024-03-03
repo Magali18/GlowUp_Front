@@ -33,8 +33,9 @@ export default function RecipeReviewCard() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  const product = useSelector((state)=> state.product)
+  const product = useSelector((state)=> state.cardñ)
 
+  console.log(product)
   return (
 
     <Card sx={{ maxWidth: '100%' }}>
@@ -60,7 +61,7 @@ export default function RecipeReviewCard() {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-         
+         Hola
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

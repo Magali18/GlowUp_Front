@@ -3,7 +3,6 @@ import "./App.css";
 import PrimarySearchAppBar from "./Components/barraDeTareas/PrimarySearchAppBar";
 import Card from "./Components/Card/Card";
 import { Box } from "@mui/system";
-import imagen from "./image/417134192_7035273036527283_1575827752176715560_n.jpg";
 import backImage from "./image/Screenshot_7.png";
 
 
