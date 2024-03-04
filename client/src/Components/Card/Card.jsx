@@ -15,6 +15,9 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useSelector } from "react-redux";
+import { IoCopyOutline } from "react-icons/io5";
+
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -50,7 +53,14 @@ export default function RecipeReviewCard() {
           </IconButton>
         }
         title={product.name}
-        subheader={product.id}
+        subheader={
+          <React.Fragment>
+            <span style={{ marginRight: '5px' }}>IU:</span>
+            {product.id} <IconButton aria-label="copy" size="large">
+              <IoCopyOutline fontSize="small" />
+            </IconButton>
+          </React.Fragment>
+        }
       />
       <CardMedia
         color="#ffff"
