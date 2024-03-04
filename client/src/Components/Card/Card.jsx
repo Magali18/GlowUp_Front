@@ -47,11 +47,7 @@ export default function RecipeReviewCard() {
             R
           </Avatar>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+       
         title={product.name}
         subheader={
           <React.Fragment>
@@ -78,9 +74,7 @@ export default function RecipeReviewCard() {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+       
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
