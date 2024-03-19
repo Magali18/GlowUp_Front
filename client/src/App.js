@@ -1,9 +1,13 @@
 import React from "react";
 import "./App.css";
 import PrimarySearchAppBar from "./Components/barraDeTareas/PrimarySearchAppBar";
-import Card from "./Components/Card/Card";
 import { Box } from "@mui/system";
 import backImage from "./image/Screenshot_7.png";
+import "./Components/NewProduct/NewProduct"
+import { Route, Routes } from "react-router-dom";
+import Home from "./Views/Home";
+import NewForm from "./Views/NewForm"
+
 
 
 function App() {
@@ -13,7 +17,7 @@ function App() {
     <div className="App">
       <PrimarySearchAppBar />
       <Box
-         sx={{
+        sx={{
           position: "relative",
           borderRadius: "10px",
           height: "25vh",
@@ -26,17 +30,23 @@ function App() {
             right: 0,
             bottom: 0,
             background: imagenBackground,
-            backgroundSize:"contain",
-      
+            backgroundSize: "contain",
+
           }
         }}
       >
-         
-          </Box>
-      
-       <Card />
-       <Card />
-       <Card />
+
+      </Box>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/form" element={<NewForm/>}/>
+
+
+      </Routes>
+
+
+
+
     </div>
   );
 }
