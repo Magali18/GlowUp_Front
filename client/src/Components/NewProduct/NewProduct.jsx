@@ -9,7 +9,6 @@ const NewProduct = ()=>{
         <Grid item xs={12} sm={6} className="bordes" style={{height:'100vh'}}>
         <Formulario/>
         </Grid>
-        <Grid item xs={12}  sm={6} className="bordes" style={{height:'100vh'}}></Grid>
 
     </Grid>
 
