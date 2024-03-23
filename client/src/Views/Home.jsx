@@ -1,9 +1,9 @@
-import RecipeReviewCard from"../Components/Card/Card"
+import Cards from "../Components/Cards/Cards";
+
 const Home = ()=>{
     return (
         <div>
-<RecipeReviewCard/>
-<RecipeReviewCard/>
+<Cards/>
         </div>
     )
 };
