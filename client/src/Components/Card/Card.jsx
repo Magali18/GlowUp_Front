@@ -38,7 +38,6 @@ export default function RecipeReviewCard() {
   };
   const product = useSelector((state) => state.card);
 
-  console.log(product);
   return (
     <Card sx={{ maxWidth: "100%", bgcolorolor: "#ffff" }}>
       <CardHeader

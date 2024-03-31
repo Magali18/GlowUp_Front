@@ -7,7 +7,8 @@ const Formulario = () => {
   const [input, setInput] = useState({
     name: "",
     cover_letter: "",
-    price: '$'
+    price: '$',
+    date: ''
   });
   
 
@@ -18,7 +19,7 @@ const Formulario = () => {
       alert('Completar los campos')
 
     } else { alert('Formulario enviado con exito') }
-
+console.log(input)
   }
 
   const handleChange = (e) => {
