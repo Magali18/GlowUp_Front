@@ -1,8 +1,7 @@
-import { Grid } from "@mui/material";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 
 const Formulario = () => {
+
 
   const [input, setInput] = useState({
     name: "",
@@ -13,13 +12,15 @@ const Formulario = () => {
   
 
   const handleSubmit = (e) => {
+  
     e.preventDefault()
 
     if (!input.name || !input.price || !input.cover_letter) {
       alert('Completar los campos')
 
     } else { alert('Formulario enviado con exito') }
-console.log(input)
+   
+
   }
 
   const handleChange = (e) => {

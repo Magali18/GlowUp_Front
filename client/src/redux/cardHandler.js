@@ -1,10 +1,16 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from 'axios'
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-export const getProduct = () => {
-    return async (dispatch) => {
-      const { data } = await axios('http://localhost:3001/allProducts')
-  
-      dispatch(allProducts ({ resultProducts: data }))
+export const fetchProducts = createAsyncThunk(
+  'products/fetchProducts',
+  async () => {
+    try {
+      const response = await axios.get('http://localhost:3001/allProducts');
+      console.log(response.data); 
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      throw error; 
     }
   }
+);
