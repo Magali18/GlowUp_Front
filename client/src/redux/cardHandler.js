@@ -8,6 +8,7 @@ export const fetchProducts = createAsyncThunk(
       const response = await axios.get('http://localhost:3001/allProducts');
       console.log(response.data); 
       return response.data;
+
     } catch (error) {
       console.error('Error fetching products:', error);
       throw error; 

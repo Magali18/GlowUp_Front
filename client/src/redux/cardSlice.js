@@ -7,11 +7,15 @@ const initialState = {
     price: "",
     picture: image,
     date: 'Abril 2024',
+    products: []
 }
 export const cardSlice = createSlice({
     name: "product",
     initialState,
     reducers: {
+        Allproducts: (state, action) => {
+            state.products = action.payload;
+        },
         addProduct: (state, action) => {
             const { name, cover_letter, price, date } = action.payload
             state.name = name
@@ -20,7 +24,9 @@ export const cardSlice = createSlice({
             state.date = date
         }
 
-    }
-});
+    },
+
+}
+);
 export const { } = cardSlice.actions;
 export default cardSlice.reducer;

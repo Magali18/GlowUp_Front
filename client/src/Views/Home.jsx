@@ -10,7 +10,7 @@ const Home = () => {
     }, [dispatch]);
     return (
         <div>
-            <Cards />
+            <Cards/>
         </div>
     )
 };
