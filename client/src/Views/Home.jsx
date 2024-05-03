@@ -1,5 +1,5 @@
 import Cards from "../Components/Cards/Cards";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProducts } from "../redux/cardHandler";
 
@@ -8,9 +8,15 @@ const Home = () => {
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
+    const products = useSelector ((state)=> state.card.products)
+  if (!products){
+    console.log('esta vacio')
+  } else{
+    console.log('esta con la info')
+  }
     return (
         <div>
-            <Cards/>
+            <Cards products={products}/>
         </div>
     )
 };

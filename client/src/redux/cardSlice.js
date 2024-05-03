@@ -1,20 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
-import image from '../image/417134192_7035273036527283_1575827752176715560_n.jpg'
 
 const initialState = {
-    name: "",
-    cover_letter: '',
-    price: "",
-    picture: image,
-    date: 'Abril 2024',
     products: []
 }
+
 export const cardSlice = createSlice({
     name: "product",
     initialState,
     reducers: {
-        Allproducts: (state, action) => {
-            state.products = action.payload;
+        allProducts: (state, action) => {
+            state.products = action.payload.products; 
+            //console.log('New state after allProducts:', state.products);
         },
         addProduct: (state, action) => {
             const { name, cover_letter, price, date } = action.payload
@@ -23,10 +19,8 @@ export const cardSlice = createSlice({
             state.price = price
             state.date = date
         }
-
     },
+});
 
-}
-);
-export const { } = cardSlice.actions;
+export const { allProducts, addProduct } = cardSlice.actions; 
 export default cardSlice.reducer;
