@@ -36,24 +36,16 @@ export default function RecipeReviewCard(props) {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+ 
 
   return (
     <Card sx={{ maxWidth: "100%", bgcolorolor: "#ffff" }}>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: '#87e5db' }} aria-label="recipe">
-            R
-          </Avatar>
-        }
        
         title={props.product.name}
         subheader={
           <React.Fragment>
-            <span style={{ marginRight: '5px' }}>IU:</span>
-            {props.product.id} <IconButton aria-label="copy" size="large">
-              <IoCopyOutline fontSize="small" />
-            </IconButton>
+            <span style={{ marginRight: '5px' }}>Inverti en vos:</span>
           </React.Fragment>
         }
       />
@@ -61,12 +53,12 @@ export default function RecipeReviewCard(props) {
         color="#ffff"
         component="img"
         height="194"
-        image={props.cover_letter}
-        alt={props.cover_letter}
+        image={props.product.cover_letter}
+        alt={props.product.cover_letter}
       />
       <CardContent>
         <Typography variant="body2">
-          {props.price}
+          {props.product.price}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -85,8 +77,7 @@ export default function RecipeReviewCard(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Descripcion:</Typography>
-          <Typography paragraph>{props.name}</Typography>
+          <Typography paragraph>{props.product.description}</Typography>
         </CardContent>
       </Collapse>
     </Card>

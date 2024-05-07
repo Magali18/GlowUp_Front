@@ -6,9 +6,11 @@ const Formulario = () => {
   const [input, setInput] = useState({
     name: "",
     cover_letter: "",
+    description: "",
     price: '$',
     date: ''
   });
+  console.log(input)
   
 
   const handleSubmit = (e) => {
@@ -59,7 +61,7 @@ const Formulario = () => {
             onChange={handleChange}
           />
           <textarea
-            name="cover_letter"
+            name="description"
             className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Descripcion producto"
             value={input.description}
@@ -67,10 +69,12 @@ const Formulario = () => {
           ></textarea>
 
           <input
-            
+            name="cover_letter"
             type="file"
             className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
             placeholder="Resume"
+            value={input.cover_letter}
+            onChange={handleChange}
 
           />
           <button type="submit" className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150">Apply</button>
